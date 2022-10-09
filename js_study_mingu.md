@@ -173,3 +173,27 @@ for (let 요소 of 배열) {
 > `JSON.stringify(객체, 변환_함수, 공백_개수)` : 자바스크립트 객체를 문자로 만든다.
 > `JSON.parse(문자열)` : 문자열을 자바스크립트 객체로 파싱한다.
 
+---
+## Chapter.8
+### 예외처리
+1. 기본예외처리 : 기본 문법, 자료형 확인하기
+2. 고급예외처리 : try, catch, finally 키워드로 처리하기
+
+```
+try {
+    blah
+} catch (exception) {
+    blah blah
+} finally {
+    blah blah blah
+}
+
+의 형태를 사용한다.
+```
+
+- 예외 객체의 속성 : `name`, `message`
+- 예외 강제로 발생시키기 : `throw` 키워드사용하기
+> 주로 문자열 또는 `Error` 객체를 입력한다.
+
+---
+## Chapter.9
