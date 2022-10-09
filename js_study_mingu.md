@@ -100,3 +100,76 @@ for (let 요소 of 배열) {
 - 클래스의 메소드 내부에서 `this`키워드를 사용해서 매개변수를 받으면 그 매개변수 필드를 즉시 생성한다.
 
 - 존재하지 않는 값은 `null`과 `undefined`가 있다.
+
+---
+## Chapter.7
+- 숫자, 문자열, 불은 기본자료형에 속한다.
+- 숫자, 문자열, 불을 객체로 생성할 수 도 있다. `new Number(273);`
+- 기본자료형에 속성과 메소드를 사용하면 객체로 변환된다.
+- 기본자료형이 속성과 메소드를 사용하고난 후에는 다시 기본자료형으로 되돌아온다.
+- 기본자료형 자체에 속성과 메소드를 추가하고 싶다면 `프로토타입` 객체를 사용해야 한다.
+
+- 프로토타입 : 모든 객체가 가져야 하는 속성과 메소드를 정의할 수 있는 객체.
+
+1. Number 클래스의 속성과 메소드
+    - MAX_VALUE
+    - MIN_VALUE
+    - NaN
+    - POSITIVE_INFINITY
+    - NEGATIVE_INFINITY
+> - toExponential()
+> - toFixed()
+> - toPrecision()
+
+2. String 클래스의 속성과 메소드
+    - length
+> 메소드는 모두 자기자신을 변경하지 않고, 변경된 값을 리턴한다.
+> - charAt()
+> - charCodeAt()
+> - concat()
+> - indexOf()
+> - lastIndexOf()
+> - match()
+> - replace()
+> - search()
+> - slice()
+> - split()
+> - substr()
+> - substring()
+> - toLowerCase()
+> - toUpperCase()
+
+- 파괴적 메소드 : 자신을 호출하는 객체의 내용을 변화시키는 메소드
+- 비파괴적 메소드 : 객체의 내용을 변화시키지 않고 리턴하는 메소드
+
+3. Date 객체
+- 이 객체의 모든 속성과 메서드는 `getXX`의 형태이다.
+
+4. Array 객체의 메소드
+    - `*`표시된 메소드들은 파괴적 메소드 이다.
+    - concat()
+    - join()
+    - pop()*
+    - push()*
+    - reverse()*
+    - slice()
+    - sort()*
+    - splice()*
+
+- 매개변수로 콜백 함수를 전달하는 메소드
+1. forEach() : 배열이 요소를 하나씩 뽑아 반복하기
+2. map() : 콜백 함수에서 리턴하는 것을 기반으로 새로운 배열 만들기
+3. filter() : 콜백 함수에서 true를 리턴하는 것으로만 새로운 배열 만들어 리턴하기
+
+- lodash 라이브러리
+1. 설치 방법
+> 1. `npm install lodash`
+> 2. `<script> src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>`
+
+- JSON 객체
+    - 문자열은 큰따옴표로 만들어야 한다.
+    - 모든 키는 큰따옴표로 감싸야 한다.
+    - 숫자, 문자열, 불 자료형만 사용할 수 있다.
+> `JSON.stringify(객체, 변환_함수, 공백_개수)` : 자바스크립트 객체를 문자로 만든다.
+> `JSON.parse(문자열)` : 문자열을 자바스크립트 객체로 파싱한다.
+
